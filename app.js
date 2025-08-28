@@ -64,11 +64,3 @@ loveButtons.forEach(button => {
 clearBtn.addEventListener('click', () => {
     historyList.innerHTML = '';
 });
-
-
- const hamburger = document.getElementById("hamburger");
-  const mobileMenu = document.getElementById("mobile-menu");
-
-  hamburger.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
-  });
