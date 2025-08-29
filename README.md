@@ -19,7 +19,7 @@ ans:
 02. How do you create and insert a new element into the DOM?
 
 ans:
-DOM-এ নতুন element তৈরি করার জন্য প্রথমে document.createElement("tagName") দিয়ে একটা নতুন element বানানো হয়। উদাহরণস্বরূপ, div বা p তৈরি করা যায়। এরপর আমরা চাইলে সেই element-এর মধ্যে textContent বা innerHTML দিয়ে কোনো লেখা বা HTML content যোগ করতে পারি। একইভাবে id বা className ব্যবহার করে element-এর জন্য identification বা styling দেওয়া যায়। একবার element তৈরি হয়ে গেলে, আমরা সেটাকে DOM-এ insert করতে পারি appendChild() দিয়ে কোনো parent element-এর শেষে বা insertBefore() দিয়ে কোনো নির্দিষ্ট element-এর আগে। এইভাবে নতুন element dynamically ওয়েবপেজে যুক্ত করা যায় এবং page-এর structure পরিবর্তন করা যায়।
+DOM-এ নতুন element তৈরি করার জন্য প্রথমে ```document.createElement("tagName")``` দিয়ে একটা নতুন element বানানো হয়। উদাহরণস্বরূপ, ```<div>``` বা ```<p>``` তৈরি করা যায়। এরপর আমরা চাইলে সেই element-এর মধ্যে textContent বা innerHTML দিয়ে কোনো লেখা বা HTML content যোগ করতে পারি। একইভাবে id বা className ব্যবহার করে element-এর জন্য identification বা styling দেওয়া যায়। একবার element তৈরি হয়ে গেলে, আমরা সেটাকে DOM-এ insert করতে পারি ```appendChild()``` দিয়ে কোনো parent element-এর শেষে বা ```insertBefore()``` দিয়ে কোনো নির্দিষ্ট element-এর আগে। এইভাবে নতুন element dynamically ওয়েবপেজে যুক্ত করা যায় এবং page-এর structure পরিবর্তন করা যায়।
 
 03. What is Event Bubbling and how does it work?
 
