@@ -32,10 +32,10 @@ callButtons.forEach(button => {
         // Coin check
         let currentCoins = parseInt(coinCount.innerText);
         if (currentCoins >= 20) {
-            alert(`You called hotline: ${hotlineNumber}\nService: ${serviceName}`);
+            alert(`calling: ${hotlineNumber}\nService: ${serviceName}`);
             coinCount.innerText = currentCoins - 20;
         } else {
-            alert("Not enough coins to make a call.");
+            alert("❌ Not enough coins to make a call. ❌");
             remainCall = false;
         }
 
