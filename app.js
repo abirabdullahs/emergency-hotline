@@ -24,6 +24,7 @@ copyButtons.forEach(button => {
 
 callButtons.forEach(button => {
     button.addEventListener('click', (e) => {
+        let remainCall = true;
         const card = e.currentTarget.closest('.card');
         const hotlineNumber = card.querySelector('h1.text-3xl').innerText;
         const serviceName = card.querySelector('h1.text-lg').innerText;
@@ -35,6 +36,7 @@ callButtons.forEach(button => {
             coinCount.innerText = currentCoins - 20;
         } else {
             alert("Not enough coins to make a call.");
+            remainCall = false;
         }
 
         // Add to history
@@ -49,7 +51,8 @@ callButtons.forEach(button => {
             </div>
             <p class="text-sm text-gray-500">${time}</p>
         `;
-        historyList.prepend(historyItem);
+
+        if (remainCall) historyList.prepend(historyItem);
     });
 });
 
