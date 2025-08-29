@@ -28,3 +28,34 @@ Event Bubbling হলো JavaScript-এর একটা event propagation পদ
 
 উদাহরণস্বরূপ, একটি ```<button>``` element একটি ```<div>```-এর ভিতরে আছে। button-এ click করলে, প্রথমে button-এর click event trigger হবে। তারপর সেই event parent div-এর উপর trigger হবে, এবং তারপর div-এর parent element-এর ওপর trigger হবে।
 
+04. What is Event Delegation in JavaScript? Why is it useful?
+
+ans:
+Event Delegation হলো এমন একটি টেকনিক যেখানে **প্রতিটি child element-এ আলাদা আলাদা event listener না দিয়ে**  
+একটা **parent element-এ মাত্র একবার event listener** বসানো হয়।  
+
+কারণ **event bubbling** এর মাধ্যমে child element-এ হওয়া event উপরের parent element পর্যন্ত উঠে আসে।  
+তাহলে parent সেই event ধরতে পারে এবং handle করতে পারে।
+##  উদাহরণ
+
+ প্রতিটি ```<li>``` তে আলাদা আলাদা listener না দিয়ে 
+শুধু parent ```<ul>``` এ listener বসানো হলো
+
+`document.getElementById("menu").addEventListener("click", function(e) {
+  if (e.target.tagName === "LI") {
+    console.log("click", e.target.innerText);
+  }
+});`
+
+05. What is the difference between preventDefault() and stopPropagation() methods?
+
+ans:
+```preventDefault()```
+এটা ব্যবহার করা হয় যখন কোনো element-এর ডিফল্ট কাজ বন্ধ করতে চাই।
+যেমন – লিঙ্কে ক্লিক করলে স্বাভাবিকভাবে নতুন পেজ ওপেন হয়, বা ফর্ম সাবমিট করলে পেজ রিফ্রেশ হয়।
+যদি আমরা ```preventDefault()``` ব্যবহার করি, তাহলে ওই কাজ আর হবে না।
+
+```stopPropagation()```
+এটা ব্যবহার করা হয় যখন কোনো event-কে উপরে bubble হয়ে parent element পর্যন্ত যাওয়া বন্ধ করতে চাই।
+মানে child element-এ event ঘটলেও সেটা আর parent element পর্যন্ত যাবে না।
+
